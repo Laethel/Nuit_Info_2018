@@ -1,9 +1,14 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
+import os
 
 def get_array_from_img(path, sizeX, sizeY):
-	img = Image.open(path)
+	img = Image.open(os.path.normpath(path))
+	img = img.resize((sizeX, sizeY), Image.ANTIALIAS)
+	return np.asarray(img)
+
+def get_array_from_resized_img(img, sizeX, sizeY): #img de type Image from PIL
 	img = img.resize((sizeX, sizeY), Image.ANTIALIAS)
 	return np.asarray(img)
 
