@@ -4,9 +4,6 @@ import matplotlib.pyplot as plt
 from utils import get_array_from_img
 from utils import aff_mat_2D
 
-m = get_array_from_img("Nuit_Info_2018\\airbus\\image.jpeg",100,100)
-print(m)
-
 def get_dom_color_img(mat):
 	somR = 0
 	somG = 0

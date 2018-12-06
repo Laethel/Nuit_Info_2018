@@ -16,6 +16,10 @@ def aff_mat_2D(matrice):
 	plt.imshow(matrice)
 	plt.show()
 
+def aff_pixel(rgb):
+	plt.imshow([[rgb]])
+	plt.show()
+
 
 """
 Exemple : 
