@@ -1,0 +1,100 @@
+/*
+    BACKBGROUND COLOR
+*/
+body {
+    transition: all 2s ease-in; 
+}
+body.dark-mode {
+    background: linear-gradient(99deg, #ffffff, #f6f6f6, #eeeeee, #dddddd, #cccccc, #bbbbbb, #aaaaaa, #999999, #888888, #777777, #666666, #555555, #444444, #333333, #222222, #111111, #000000, #000000, #000000);
+    background-size: 3000% 3000%;
+    -webkit-animation: toDark 1s ease forwards;
+    -moz-animation: toDark 1s ease forwards;
+    animation: toDark 1s ease forwards;
+}
+body.white-mode {
+    background: linear-gradient(99deg, #000000, #111111, #222222, #333333, #444444, #555555, #666666, #777777, #888888, #999999, #aaaaaa, #bbbbbb, #cccccc, #dddddd, #eeeeee, #f6f6f6, #fff, #ffffff, #ffffff);
+    background-size: 3000% 3000%;  
+    -webkit-animation: toWhite 1s ease forwards;
+    -moz-animation: toWhite 1s ease forwards;
+    animation: toWhite 1s ease forwards;
+}
+/*
+    ANIMATION BACKGROUND
+*/
+@-webkit-keyframes toWhite {
+    0%{background-position:0% 51%}
+    100%{background-position:100% 50%}
+}
+@-moz-keyframes toWhite {
+    0%{background-position:0% 51%}
+    100%{background-position:100% 50%}
+}
+@keyframes toWhite { 
+    0%{background-position:0% 51%}
+    100%{background-position:100% 50%}
+}
+@-webkit-keyframes toDark {
+    0%{background-position:0% 58%}
+    100%{background-position:100% 43%}
+}
+@-moz-keyframes toDark {
+    0%{background-position:0% 58%}
+    100%{background-position:100% 43%}
+}
+@keyframes toDark { 
+    0%{background-position:0% 58%}
+    100%{background-position:100% 43%}
+}
+
+/*
+    BUTTON WHITE AND DARK MODE
+*/
+#moon-container {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 10px;
+    -moz-box-shadow:    0 0 5px rgba(15, 15, 15, 0.30);
+    -webkit-box-shadow: 0 0 5px rgba(15, 15, 15, 0.30)00;
+    box-shadow:         0 0 5px rgba(15, 15, 15, 0.30); 
+    transition: all 1.23s ease;
+}
+body.white-mode #moon-container, body.default-body #moon-container {
+    background-color: rgba(15, 15, 15, 0.363);
+}
+
+body.dark-mode #moon-container {
+    background-color: rgba(207, 207, 207, 0.322);
+}
+
+#moon-container:hover {
+    background-color: rgba(15, 15, 15, 0.40);
+}
+#moon {
+    height: 20px;
+    width: 20px;
+    transition: all 0.84s ease;
+}
+body.white-mode #moon, body.default-body  {
+    fill: #333;
+}
+body.dark-mode #moon {
+    fill: #fff;
+}
+#moon-container:hover > #moon {
+    fill: rgba(37,72,194, 0.38);
+}
+
+/* 
+    GENERAL CHANGING COLOR 
+*/
+body.dark-mode p, body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5,
+body.dark-mode div, body.dark-mode span, body.dark-mode button,  body.dark-mode form, body.dark-mode input {
+    color: #ffffff !important; /* PUT THE COLOR FOR TEXT ON DARK MODE */
+    transition: all 1s ease; 
+}
+body.white-mode p, body.white-mode h1, body.white-mode h2, body.white-mode h3,  body.white-mode h4,  body.white-mode h5,
+body.white-mode div,  body.white-mode span, body.white-mode button, body.white-mode form, body.white-mode input {
+    color: #000000 !important; /* PUT THE COLOR FOR TEXT ON WHITE MODE */
+    transition: all 1s ease; 
+}
