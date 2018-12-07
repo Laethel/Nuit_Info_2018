@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+<<<<<<< HEAD
 from PIL import Image
 import os
 
@@ -31,3 +32,13 @@ import utils
 img = utils.get_array_from_img("Nuit_Info_2018\\airbus\\image.jpeg", 100, 100)
 utils.aff_mat_2D(img)
 """
+=======
+
+
+def get_array_from_img(path):
+	return np.asarray(plt.imread(path))
+
+def aff_mat_2D(matrice):
+	plt.imshow(matrice)
+	plt.show()
+>>>>>>> parent of 0932d34... Réorganisation des branches
