@@ -1,19 +1,20 @@
 from PIL import Image 
 import os 
+from utils import normalize
  
  
 # concatene des image de la matrice de chemin d'image "matrix"
 # sauvegarde le résultat dans le path donné "save_path"
  
-def merge_imgs(matrix,save_path): 
-    img = Image.open(matrix[0][0]) 
-    width_image, height_image = img.size 
+def merge_imgs(matrix, save_path, sizeX, sizeY): 
+    #img = Image.open(matrix[0][0]) 
+    width_image, height_image = sizeX, sizeY
     res = Image.new("RGB",(len(matrix) * width_image, len(matrix[0]) * height_image)) 
     curseur_x = 0 
     curseur_y = 0 
     for j in matrix:
-         for i in j:
-            img = Image.open(i) 
+        for i in j:
+            img = normalize(i, sizeX, sizeY)
             if (curseur_x >= width_image * len(matrix) ): 
                 curseur_x = 0 
                 curseur_y += height_image 

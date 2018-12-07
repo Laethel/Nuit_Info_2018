@@ -3,6 +3,10 @@ import numpy as np
 from PIL import Image
 import os
 
+def normalize(path, sizeX, sizeY):
+	img = Image.open(os.path.normpath(path))
+	return img.resize((sizeX, sizeY), Image.ANTIALIAS)	
+
 def get_array_from_img(path, sizeX, sizeY):
 	img = Image.open(os.path.normpath(path))
 	img = img.resize((sizeX, sizeY), Image.ANTIALIAS)

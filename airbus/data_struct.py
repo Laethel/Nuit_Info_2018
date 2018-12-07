@@ -23,7 +23,9 @@ def get_val(rgb, structure):
 		for l in liste:
 			if l[1] < mini[1] :
 				mini = l
-		return structure[mini[0]]
+		return structure[mini[0]][0]
 		
 def associate_pixel_to_img(img, structure):
-	return [[get_val((r,g,b), structure) for (r,g,b) in ligne] for ligne in img]
+	mapa = [[ get_val((r,g,b), structure) for (r,g,b) in ligne] for ligne in img]
+	print(mapa)
+	return mapa
