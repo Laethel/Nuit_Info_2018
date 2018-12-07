@@ -7,8 +7,6 @@ import datetime
 # sauvegarde le résultat dans le path donné "save_path"
  
 def merge_imgs(matrix, save_path, sizeX, sizeY): 
-	
-	#img = Image.open(matrix[0][0]) 
 	width_image, height_image = sizeX, sizeY
 	res = Image.new("RGB",(len(matrix) * width_image, len(matrix[0]) * height_image)) 
 	curseur_x = 0 
