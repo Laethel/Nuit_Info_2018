@@ -14,11 +14,11 @@ def main():
 	for i in range(1,nb_img):
 		ranger_image(struc, i)
 	img_res = r"Nuit_Info_2018\airbus\Limage.png"
-	mat = get_array_from_img(img_res, 50, 50)
+	mat = get_array_from_img(img_res, 500, 500)
 	print(mat)
 	map_img = associate_pixel_to_img(mat, struc)
 	print(map_img)
-	res = merge_imgs(map_img, chemin_img_res, 50, 50)
+	res = merge_imgs(map_img, chemin_img_res, 10, 10)
 	aff_mat_2D(res)
 
 if __name__ == "__main__":

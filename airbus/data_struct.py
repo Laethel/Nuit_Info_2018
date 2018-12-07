@@ -1,18 +1,25 @@
 from average import get_dom_color_img
 from utils import get_array_from_img
 from utils import aff_mat_2D
+from utils import normalize
 import os
+from PIL import Image 
+
 
 def ranger_image(structure, numero):
 	size = 10
-	m = get_array_from_img(r"Nuit_Info_2018\airbus\Bibli/"+str(numero)+".jpg", size, size)
+	chemin_img = r"Nuit_Info_2018\airbus\Bibli/"+str(numero)+".jpg"
+	save_dir = r"Nuit_Info_2018\airbus\img_unif/"+str(numero)+".jpg"
+	m = get_array_from_img(chemin_img, size, size)
 	color_dom = get_dom_color_img(m)
 	if color_dom in structure :
 		structure[color_dom].append(numero)
 	else :
 		structure[color_dom] = [numero]
+	img = normalize(chemin_img, size, size)
+	img.save(save_dir)
 
-def get_val(rgb, structure):	
+def get_val(rgb, structure):
 	(r, g, b) = rgb
 	if (r, g, b) in structure:
 		return structure[(r,g,b)]
