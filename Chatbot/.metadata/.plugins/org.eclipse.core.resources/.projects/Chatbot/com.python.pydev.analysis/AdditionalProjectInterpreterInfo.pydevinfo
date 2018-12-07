@@ -1,0 +1,27 @@
+-- VERSION_5
+-- START DISKCACHE_2
+C:\Users\quent\Documents\GitHub_Repositories\Nuit_Info_2018\Chatbot\.metadata\.plugins\org.eclipse.core.resources\.projects\Chatbot\com.python.pydev.analysis\v2_indexcache
+bot.botMain|1544136522674116000|C:\Users\quent\Documents\GitHub_Repositories\Nuit_Info_2018\Chatbot\Chatbot\bot\botMain.py
+bot.__init__|1544136522668132000|C:\Users\quent\Documents\GitHub_Repositories\Nuit_Info_2018\Chatbot\Chatbot\bot\__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+2
+1=C:\Users\quent\Documents\GitHub_Repositories\Nuit_Info_2018\Chatbot\Chatbot\bot\botMain.py
+2=bot.botMain
+-- END DICTIONARY
+-- START TREE 1
+10
+f|1|f!1^11#1*19@
+fla|1|flag!1^67#1*19@
+gre|3|GREETING_RESPONSES!1^33#1*19@GREETING_INPUTS!1^32#1*19@greeting!1^38#5*18@
+lem|3|LemNormalize!1^28#5*18@lemmer!1^24#1*19@LemTokens!1^25#5*18@
+raw|1|raw!1^12#1*19@
+rem|1|remove_punct_dict!1^27#1*19@
+res|1|response!1^49#5*18@
+sen|1|sent_tokens!1^14#1*19@
+use|1|user_response!1^71#5*19@
+wor|1|word_tokens!1^15#1*19@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE
