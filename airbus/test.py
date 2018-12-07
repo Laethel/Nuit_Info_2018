@@ -47,7 +47,6 @@ def main():
 
 	print("Debut merge...")
 	res = merge_imgs(map_img, chemin_img_save, size_mosaique, dir_img_unif)
-	aff_mat_2D(res)
 
 
 if __name__ == "__main__":
