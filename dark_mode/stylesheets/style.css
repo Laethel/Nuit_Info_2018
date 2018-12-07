@@ -49,7 +49,7 @@ body.white-mode {
 /*
     BUTTON WHITE AND DARK MODE
 */
-#moon-container {
+#moon-container{
     position: absolute;
     top: 15px;
     right: 15px;
@@ -59,12 +59,28 @@ body.white-mode {
     box-shadow:         0 0 5px rgba(15, 15, 15, 0.30); 
     transition: all 1.23s ease;
 }
-body.white-mode #moon-container, body.default-body #moon-container {
+body.white-mode #moon-container, body.default-body #moon-container{
     background-color: rgba(15, 15, 15, 0.363);
 }
 
 body.dark-mode #moon-container {
     background-color: rgba(207, 207, 207, 0.322);
+}
+
+body.white-mode #content, body.default-body #content{
+    background-color: #ffffff;
+}
+
+body.dark-mode #content {
+    background-color: #000000;
+}
+
+body.white-mode ul, body.default-body ul{
+    background-color: #ffffff;
+}
+
+body.dark-mode ul {
+    background-color: #000000;
 }
 
 #moon-container:hover {
@@ -89,12 +105,12 @@ body.dark-mode #moon {
     GENERAL CHANGING COLOR 
 */
 body.dark-mode p, body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5,
-body.dark-mode div, body.dark-mode span, body.dark-mode button,  body.dark-mode form, body.dark-mode input {
+body.dark-mode div, body.dark-mode span, body.dark-mode button,  body.dark-mode form, body.dark-mode input, body.dark-mode a{
     color: #ffffff !important; /* PUT THE COLOR FOR TEXT ON DARK MODE */
     transition: all 1s ease; 
 }
 body.white-mode p, body.white-mode h1, body.white-mode h2, body.white-mode h3,  body.white-mode h4,  body.white-mode h5,
-body.white-mode div,  body.white-mode span, body.white-mode button, body.white-mode form, body.white-mode input {
+body.white-mode div,  body.white-mode span, body.white-mode button, body.white-mode form, body.white-mode input, body.white-mode a{
     color: #000000 !important; /* PUT THE COLOR FOR TEXT ON WHITE MODE */
     transition: all 1s ease; 
 }

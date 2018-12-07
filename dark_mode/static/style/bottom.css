@@ -1,0 +1,63 @@
+.image-to-left .left, .image-to-right .right {
+    min-height: 150px; /* provisory */
+    z-index: 0;
+}
+section {
+    overflow: hidden;
+}
+.image-to-left .right, .image-to-right .left {
+    position:relative;
+}
+
+.image-to-left .diagonal-bg{
+    left: -14%;
+    z-index: 0;
+    transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -webkit-transform: skew(-20deg);
+}
+
+.image-to-right .left .diagonal-bg {
+    left: -40%;
+    z-index: 1;
+    transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -webkit-transform: skew(-20deg);
+}
+
+.image-to-left .diagonal-bg, .image-to-right .diagonal-bg {
+    background-color: #ed1b2e;
+    position:absolute;
+    height: 100%;
+    width: 150%;
+}
+
+
+.image-to-left .right .text, .image-to-right .left .text {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 2.4em;
+}
+.image-to-right .left .text {
+    text-align: right;
+}
+.bold {
+    font-weight: bold;
+}
+
+.image-to-left .right p {
+    max-width: 60%;
+}
+
+.button-white {
+    background-color: white;
+    color: #ed1b2e;
+    padding: 0.5em 1em;
+}
+
+.image-to-right img {
+    background-size: contain;
+}

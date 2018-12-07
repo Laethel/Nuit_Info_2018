@@ -1,0 +1,407 @@
+#border {
+    background-color: #ed1b2e;
+    
+}
+#content {
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+#content {
+    color: #fff;
+}
+#head .logo {
+    margin: 25px 0;
+    position: relative;
+    left: 0;
+  
+}
+
+#extreme{
+    color: black;
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-right: 390px;
+    
+}
+
+
+
+#head .logo img {
+    height: 100px;
+    vertical-align: middle;
+}
+
+#head>div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 1230px;
+    padding: 0px 30px;
+    margin: 0 auto;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+  .searchbar #searchbar-input {
+    border: 0px solid;
+    border-bottom: 2px solid black;
+    width: 600px;
+    font-size: 4.9rem;
+    outline: none;
+    color: #606060;
+    display: none;
+  }
+  .searchbar .fa-times {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+
+  .searchbar .fi-magnifying-glass {
+    
+    font-size: 30px;
+    cursor: pointer;
+    color: #1E1D1D;
+  }
+
+  #head #magnifier {
+    right: 0;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0 0 0 20px;
+}
+
+#head .menusimple {
+    position: static;
+    margin: 0 auto 0 0;
+}
+
+.menusimple li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.menusimple > li a {
+    display: block;
+    font-family: 'Raleway', sans-serif;  
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 1.05em;
+    margin: 0 5px;
+}
+#head #middle-head {
+    position: relative;
+}
+
+
+#head #search-bar input[type='text'] {
+
+    margin: 0;
+}
+
+#head #buttonsimple .cus-btn {
+    font-family: 'Raleway', sans-serif;  
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+#primary-menu ul li a:before {
+    content:'>';
+    color: #ed1b2e;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin: 10px;
+}
+
+#primary-menu ul li {
+    padding: 0.5em;
+}
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+    border-color: #ed1b2e transparent transparent;
+}
+
+.dropdown.menu .se-former.is-dropdown-submenu-parent a:after {
+    border-color: #000 transparent transparent !important;
+}
+
+/*
+    ANIMATION 
+*/
+#first-section {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-top: -9%;
+}
+#first-section .wave {
+    overflow: hidden;
+}
+
+#first-section svg {
+    margin-bottom: -10px;
+}
+
+#first-section .wave .wavies > use {
+    -webkit-animation: waveAround 25s linear infinite;
+    animation: waveAround 25s linear infinite;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+    -webkit-animation-duration: 15s;
+    animation-duration: 15s;
+}
+  @-webkit-keyframes waveAround {
+    0% {
+      -webkit-transform: translate(-90px, 0%);
+              transform: translate(-90px, 0%);
+    }
+    100% {
+      -webkit-transform: translate(85px, 0%);
+              transform: translate(85px, 0%);
+    }
+  }
+  
+  @keyframes waveAround {
+    0% {
+      -webkit-transform: translate(-90px, 0%);
+              transform: translate(-90px, 0%);
+    }
+    100% {
+      -webkit-transform: translate(85px, 0%);
+              transform: translate(85px, 0%);
+    }
+  }
+
+#first-section .under-wave {
+    background-color: #ed1b2e;
+    width: 100%;
+}
+#first-section .under-wave h2 {
+    padding: 0 2em;
+}
+
+.carte-france a img{
+    width: 20px;
+    margin: 0 5px;
+}
+#hero {
+    width: 100%;
+    text-align: center;
+    padding: 7em;
+    min-height: 1000px;
+    position: relative;
+    background-image: url("../../pics/back_pic.jpg");
+    background-size: cover;
+}
+#hero .main-title {
+    font-size: 3.0em;
+}
+#hero .sub-title {
+    font-size: 2.2em;
+}
+#hero p {
+    font-size: 1.5em;
+}
+
+#hero i {
+    border: 1px solid #1E1D1D;
+    background-color: #1E1D1D;
+    padding: 0.25em 0.50em;
+    font-size: 1.5em;
+    color: #fff;
+}
+#hero i:hover {
+    border: 1px solid #333;
+    background-color: #333;
+    padding: 0.25em 0.50em;
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+}
+
+#hero .right-side div {
+    margin: 0.5em;
+}
+#hero .right-side {
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    min-width: 66px;
+    max-width: 66px;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+#first-section section {
+    margin-top: 75px;
+}
+
+#first-section .social {
+    background-color:#ed1b2e;
+    overflow: visible;
+}
+
+#first-section .social .box {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    max-height: 700px;
+    justify-content: stretch;
+}
+#first-section .social .box .box-facebook, #first-section .social .box .box-twitter, #first-section .social .box .box-instagram {
+width: 33.33%;
+
+}
+#first-section .social .box div .feed {
+    max-height: 650px;
+    overflow: hidden;
+    overflow: scroll;
+    padding: 20px;
+}
+#first-section .social .box div .feed .twitter-timeline {
+    overflow: scroll;
+    width: 100%;
+}
+
+#first-section .social .box .box-facebook, #first-section .social .box .box-facebook .bubble  {
+    background-color: #3b5999;
+}
+#first-section .social .box .box-twitter, #first-section .social .box .box-twitter .bubble {
+    background-color: #55acee;
+}
+#first-section .social .box .box-instagram, #first-section .social .box .box-instagram .bubble  {
+    background-color: #c32aa3;
+}
+.box-instagram {
+    background: -webkit-radial-gradient(50px 220px, #ffda75 18%, #ff3a49 43%, #ff3a49 50%, #e518a1 70%, #6634e1 100%);
+}
+  
+#first-section .social .box .bubble {
+    border-radius: 50%;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    position: relative;
+    width: 50px;
+    z-index: 2;
+    display:inline-block;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+#first-section .social .box .bubble i {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#elements {
+    color: #000;
+    padding: 2em;
+}
+
+
+/*
+    FOOTER
+*/
+footer {
+    background-color: #1E1D1D;
+    padding: 2em 0;
+}
+
+footer ul li a, footer p {
+    color: #BDC3C7 !important;
+    font-size: 0.8em;
+    font-weight: 200;
+    vertical-align: middle;
+}
+footer ul li a {
+    padding: 0 1em;
+}
+
+footer p {
+    margin: 5em 0;
+    text-align: center;
+}
+
+/*#bas{
+    margin-top: 200px;
+}*/
+
+/*
+    ELEMENTS CARD
+*/
+#elements {
+    padding: 2em 4em;
+    display: block;
+    overflow: auto;
+}
+#elements .card.other h3 {
+    width: 100%;
+    top: 2em;
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    color: #ed1b2e;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+#elements .card {
+    position: relative;
+    float: left;
+    width: 350px;
+    max-height: 250px;
+    margin: 1em;
+}
+#elements .card:nth-child(3n+1) {
+    clear: left;
+}
+#elements .card .head-picture  {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+#elements .card .head-picture h3 {
+    position: absolute;
+    font-weight: bold;
+    padding: 15px;
+    top: 0;
+    color: #fff;
+    
+}
+
+#elements .card .text {
+    color: #fff;
+    background-color: #1E1D1D;  
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 16px;
+    margin: 0;
+    line-height: 1.6;
+}
