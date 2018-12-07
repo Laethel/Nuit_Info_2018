@@ -7,10 +7,9 @@ from PIL import Image
 import random
 
 
-def ranger_image(structure, numero):
-	size = 10
-	chemin_img = r"Nuit_Info_2018\airbus\Bibli/"+str(numero)+".jpg"
-	save_dir = r"Nuit_Info_2018\airbus\img_unif/"+str(numero)+".jpg"
+def ranger_image(structure, numero, dir_bibli, save_dir, size):
+	chemin_img = os.path.join(dir_bibli, str(numero)+".jpg")
+	save_dir = os.path.join(save_dir, str(numero)+".jpg")
 	m = get_array_from_img(chemin_img, size, size)
 	color_dom = get_dom_color_img(m)
 	if color_dom in structure :
@@ -32,7 +31,7 @@ def get_val(rgb, structure):
 		for l in liste:
 			if l[1] < mini[1] :
 				mini = l
-		return structure[mini[0]][random.randint(0,len(structure[(r,g,b)])-1)]
+		return structure[mini[0]][random.randint(0,len(structure[mini[0]])-1)]
 		
 def associate_pixel_to_img(img, structure):
 	return [[get_val(rgb, structure) for rgb in ligne] for ligne in img]

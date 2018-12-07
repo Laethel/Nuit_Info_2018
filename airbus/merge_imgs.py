@@ -6,14 +6,16 @@ import datetime
 # concatene des image de la matrice de chemin d'image "matrix"
 # sauvegarde le résultat dans le path donné "save_path"
  
-def merge_imgs(matrix, save_path, sizeX, sizeY): 
-	width_image, height_image = sizeX, sizeY
+def merge_imgs(matrix, save_path, size, dir_img_unif): 
+	width_image, height_image = size, size
 	res = Image.new("RGB",(len(matrix) * width_image, len(matrix[0]) * height_image)) 
 	curseur_x = 0 
 	curseur_y = 0 
-	for j in matrix:
+	for c,j in enumerate(matrix):
+		print((c/len(matrix))*100,"%")
 		for i in j:
-			img = Image.open(r"Nuit_Info_2018\airbus\img_unif/"+str(i)+".jpg")
+			img_unif = os.path.join(dir_img_unif,str(i)+".jpg")
+			img = Image.open(img_unif)
 			if (curseur_x >= width_image * len(matrix) ): 
 				curseur_x = 0 
 				curseur_y += height_image 
