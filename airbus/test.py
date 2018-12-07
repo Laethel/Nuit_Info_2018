@@ -8,21 +8,31 @@ from merge_imgs import merge_imgs
 from PIL import Image
 import numpy as np
 import os
+import sys
 
-dir_bibli = r"Nuit_Info_2018\\airbus\\Bibli"
-dir_img_unif = r"Nuit_Info_2018\\airbus\\img_unif"
+dir_bibli = r"Bibli"
+dir_img_unif = r"img_unif"
 chemin_img_save = r"C:\\Users\\GuillaumeGobin\\Documents\\Nuit_Info\\Nuit_Info_2018\\airbus\\res.png"
-chemin_img_res = r"Nuit_Info_2018\\airbus\\Limage.png"
+chemin_img_res = r"Limage.png"
 
 img_res = Image.open(chemin_img_res)
 
 (sizeX, sizeY) = img_res.size
 
-size_mosaique = 10
-img_resizeX = 10
-img_resizeY = 10
+
 
 def main():
+	if len(sys.argv) == 2:
+		size_mosaique = int(sys.argv[1])
+		img_resizeX = sizeX
+		img_resizeY = sizeY
+	elif len(sys.argv) == 4:
+		size_mosaique = int(sys.argv[1])
+		img_resizeX = int(sys.argv[2])
+		img_resizeY = int(sys.argv[3])
+	else:
+		print("Usage : <size_mosaique> [ <size_img_x> <size_img_y> ]")
+		exit()
 	nb_img = len(os.listdir(dir_bibli))
 	print("Nombre d'image : ",nb_img)
 	struc = {}
