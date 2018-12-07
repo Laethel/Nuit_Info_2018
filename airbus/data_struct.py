@@ -1,5 +1,6 @@
 from average import get_dom_color_img
 from utils import get_array_from_img
+from utils import aff_mat_2D
 
 def ranger_image(structure, path):
 	size = 10
@@ -10,3 +11,5 @@ def ranger_image(structure, path):
 	else :
 		structure[color_dom] = [path]
 
+def associate_pixel_to_img(img, structure):
+	return [[structure[(r,g,b)] for (r,g,b) in ligne] for ligne in img]
