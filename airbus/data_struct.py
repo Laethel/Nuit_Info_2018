@@ -3,7 +3,8 @@ from utils import get_array_from_img
 from utils import aff_mat_2D
 from utils import normalize
 import os
-from PIL import Image 
+from PIL import Image
+import random
 
 
 def ranger_image(structure, numero):
@@ -22,7 +23,7 @@ def ranger_image(structure, numero):
 def get_val(rgb, structure):
 	(r, g, b) = rgb
 	if (r, g, b) in structure:
-		return structure[(r,g,b)]
+		return structure[(r,g,b)][random.randint(0,len(structure[(r,g,b)])-1)]
 	else :
 		liste = []
 		for (r1,g1,b1) in structure:
@@ -31,7 +32,7 @@ def get_val(rgb, structure):
 		for l in liste:
 			if l[1] < mini[1] :
 				mini = l
-		return structure[mini[0]][0]
+		return structure[mini[0]][random.randint(0,len(structure[(r,g,b)])-1)]
 		
 def associate_pixel_to_img(img, structure):
 	return [[get_val(rgb, structure) for rgb in ligne] for ligne in img]
