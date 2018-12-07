@@ -12,13 +12,13 @@ def main():
 	chemin_img_res = r"C:\Users\GuillaumeGobin\Documents\Nuit_Info\Nuit_Info_2018\airbus\res.png"
 	struc = {}
 	for i in range(1,nb_img):
-		ranger_image(struc, r"Nuit_Info_2018\airbus\Bibli\\"+str(i)+".jpg")
+		ranger_image(struc, i)
 	img_res = r"Nuit_Info_2018\airbus\Limage.png"
-	mat = get_array_from_img(img_res, 225, 225)
-	aff_mat_2D(mat)
-	map_img = np.asarray(associate_pixel_to_img(mat, struc))
+	mat = get_array_from_img(img_res, 50, 50)
+	print(mat)
+	map_img = associate_pixel_to_img(mat, struc)
 	print(map_img)
-	res = merge_imgs(map_img, chemin_img_res, 10, 10)
+	res = merge_imgs(map_img, chemin_img_res, 50, 50)
 	aff_mat_2D(res)
 
 if __name__ == "__main__":

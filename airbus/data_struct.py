@@ -1,15 +1,16 @@
 from average import get_dom_color_img
 from utils import get_array_from_img
 from utils import aff_mat_2D
+import os
 
-def ranger_image(structure, path):
+def ranger_image(structure, numero):
 	size = 10
-	m = get_array_from_img(path, size, size)
+	m = get_array_from_img(r"Nuit_Info_2018\airbus\Bibli/"+str(numero)+".jpg", size, size)
 	color_dom = get_dom_color_img(m)
 	if color_dom in structure :
-		structure[color_dom].append(path)
+		structure[color_dom].append(numero)
 	else :
-		structure[color_dom] = [path]
+		structure[color_dom] = [numero]
 
 def get_val(rgb, structure):	
 	(r, g, b) = rgb
@@ -26,6 +27,4 @@ def get_val(rgb, structure):
 		return structure[mini[0]][0]
 		
 def associate_pixel_to_img(img, structure):
-	mapa = [[ get_val((r,g,b), structure) for (r,g,b) in ligne] for ligne in img]
-	print(mapa)
-	return mapa
+	return [[get_val(rgb, structure) for rgb in ligne] for ligne in img]

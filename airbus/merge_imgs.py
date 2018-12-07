@@ -14,7 +14,7 @@ def merge_imgs(matrix, save_path, sizeX, sizeY):
     curseur_y = 0 
     for j in matrix:
         for i in j:
-            img = normalize(i, sizeX, sizeY)
+            img = normalize(r"Nuit_Info_2018\airbus\Bibli/"+str(i)+".jpg", sizeX, sizeY)
             if (curseur_x >= width_image * len(matrix) ): 
                 curseur_x = 0 
                 curseur_y += height_image 
