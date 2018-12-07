@@ -12,4 +12,19 @@ def ranger_image(structure, path):
 		structure[color_dom] = [path]
 
 def associate_pixel_to_img(img, structure):
-	return [[structure[(r,g,b)] for (r,g,b) in ligne] for ligne in img]
+	return [[get_val((r,g,b), structure) for (r,g,b) in ligne] for ligne in img]
+
+def get_val(rgb, structure):	
+	(r, g, b) = rgb
+	if (r, g, b) in structure:
+		return structure[(r,g,b)]
+	else :
+		l = []
+		for (a,b,c) in structure:
+			l.append((r-a, g-b, b-c))
+
+struc = {}
+struc[(0,0,0)] = 1
+struc[(255,255,255)] = 2
+for i in struc:
+	print(i)
